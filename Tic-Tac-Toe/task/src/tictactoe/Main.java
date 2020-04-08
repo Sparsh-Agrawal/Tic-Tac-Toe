@@ -25,10 +25,38 @@ public class Main {
         System.out.println("---------");
 
 
+        while(true) {
+            //user coordinates
+            System.out.print("Enter the coordinates: ");
+            String co = scan.nextLine();
+            if (co.equals("1 3"))
+                c = 0;
+            else if (co.equals("2 3"))
+                c = 1;
+            else if (co.equals("3 3"))
+                c = 2;
+            else if (co.equals("1 2"))
+                c = 3;
+            else if (co.equals("2 2"))
+                c = 4;
+            else if (co.equals("3 2"))
+                c = 5;
+            else if (co.equals("1 1"))
+                c = 6;
+            else if (co.equals("2 1"))
+                c = 7;
+            else if (co.equals("3 1"))
+                c = 8;
 
-        //user coordinates
-
-
+            if (s.charAt(c) == '_') {
+                char[] ch = s.toCharArray();
+                ch[c] = 'X';
+                s = String.valueOf(ch);
+                break;
+            } else {
+                System.out.println("This cell is occupied! Choose another one!");
+            }
+        }
 
 
 //        //Printing the state
