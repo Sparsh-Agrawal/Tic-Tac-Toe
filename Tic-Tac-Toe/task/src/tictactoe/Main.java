@@ -1,5 +1,7 @@
 package tictactoe;
 
+import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -25,38 +27,58 @@ public class Main {
         System.out.println("---------");
 
 
+        //user coordinates
         while(true) {
-            //user coordinates
-            System.out.print("Enter the coordinates: ");
-            String co = scan.nextLine();
-            if (co.equals("1 3"))
-                c = 0;
-            else if (co.equals("2 3"))
-                c = 1;
-            else if (co.equals("3 3"))
-                c = 2;
-            else if (co.equals("1 2"))
-                c = 3;
-            else if (co.equals("2 2"))
-                c = 4;
-            else if (co.equals("3 2"))
-                c = 5;
-            else if (co.equals("1 1"))
-                c = 6;
-            else if (co.equals("2 1"))
-                c = 7;
-            else if (co.equals("3 1"))
-                c = 8;
+            try {
+                System.out.print("Enter the coordinates: ");
+                String co = scan.nextLine();
+                if (Integer.parseInt(String.valueOf(co.charAt(0))) > 3 || Integer.parseInt(String.valueOf(co.charAt(0))) < 0 || Integer.parseInt(String.valueOf(co.charAt(2))) > 3 || Integer.parseInt(String.valueOf(co.charAt(2))) < 0) {
+                    //System.out.println("This cell is occupied! Choose another one!");
+                    throw new InputMismatchException();
+                }
+                if (co.equals("1 3"))
+                    c = 0;
+                else if (co.equals("2 3"))
+                    c = 1;
+                else if (co.equals("3 3"))
+                    c = 2;
+                else if (co.equals("1 2"))
+                    c = 3;
+                else if (co.equals("2 2"))
+                    c = 4;
+                else if (co.equals("3 2"))
+                    c = 5;
+                else if (co.equals("1 1"))
+                    c = 6;
+                else if (co.equals("2 1"))
+                    c = 7;
+                else if (co.equals("3 1"))
+                    c = 8;
 
-            if (s.charAt(c) == '_') {
-                char[] ch = s.toCharArray();
-                ch[c] = 'X';
-                s = String.valueOf(ch);
-                break;
-            } else {
-                System.out.println("This cell is occupied! Choose another one!");
+                if (s.charAt(c) == '_') {
+                    char[] ch = s.toCharArray();
+                    ch[c] = 'X';
+                    s = String.valueOf(ch);
+                    break;
+                } else {
+                    System.out.println("This cell is occupied! Choose another one!");
+                }
+            }catch (Exception e){
+
             }
         }
+        c=0;
+        System.out.println("---------");
+        for(int i=0;i<3;i++) {
+            System.out.print("| ");
+            for(int j=0;j<3;j++) {
+                System.out.print(s.charAt(c)+" ");
+                c++;
+            }
+            System.out.print("|");
+            System.out.println();
+        }
+        System.out.println("---------");
 
 
 //        //Printing the state
