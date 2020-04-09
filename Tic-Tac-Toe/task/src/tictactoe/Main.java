@@ -59,7 +59,7 @@ public class Main {
     static void check(String co) throws NotEmptyException {
         int c=0;
         if (toInt(co.charAt(0)) > 3 || toInt(co.charAt(0)) < 0 || toInt(co.charAt(2)) > 3 || toInt(co.charAt(2)) < 0) {
-            //System.out.println("This cell is occupied! Choose another one!");
+            //This cell is occupied! Choose another one!
             throw new InputMismatchException();
         }
         if (co.equals("1 3"))
@@ -114,12 +114,8 @@ public class Main {
                 if (s.charAt(arr[p]) == s.charAt(arr[p + 1]) && s.charAt(arr[p]) == s.charAt(arr[p + 2])) {
                     if (s.charAt(arr[p]) == 'X') {
                         t = 3;
-                       // y = 4;
-                        //break;
                     } else if(s.charAt(arr[p]) == 'O'){
-                       // t = 4;
                         y = 3;
-                        //break;
                     }
                 }
             }
