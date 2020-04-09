@@ -1,6 +1,5 @@
 package tictactoe;
 
-import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -18,7 +17,6 @@ public class Main {
         //System.out.print("Enter cells: ");
         //String s = scan.nextLine();
         s = "         ";
-        int c = 0;
 //        System.out.println("---------");
 //        for(int i=0;i<3;i++) {
 //            System.out.print("| ");
@@ -37,6 +35,8 @@ public class Main {
         //user coordinates
         while(true) {
             try {
+                if(checkWin(s))
+                    break;
                 System.out.print("Enter the coordinates: ");
                 String co = scan.nextLine();
                 check(co);
