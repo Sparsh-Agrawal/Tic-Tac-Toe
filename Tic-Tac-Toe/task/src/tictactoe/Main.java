@@ -228,7 +228,7 @@ public class Main {
 
     static boolean checkWin(String s){
         int[] arr = { 0,1,2, 3,4,5, 6,7,8, 0,3,6, 1,4,7, 2,5,8, 0,4,8, 2,4,6 };
-        String G1 = "Game not finished";
+//        String G1 = "Game not finished";
         String D2 = "Draw";
         String X3 = "X wins";
         String O4 = "O wins";
@@ -274,21 +274,21 @@ public class Main {
             }
         }
 
-        if(t==0 && y==0)
-        {
-            for(int i=0;i<s.length();i++) {
-                if (s.charAt(i) == ' ') {
-                    t = 1;
-                    break;
-                }
-            }
-            if(t!=1)
-                t=2;
-        }
+//        if(t==0 && y==0)
+//        {
+//            for(int i=0;i<s.length();i++) {
+//                if (s.charAt(i) == ' ') {
+//                    t = 1;
+//                    break;
+//                }
+//            }
+//            if(t!=1)
+//                t=2;
+//        }
 
-        if(t==1)
-            System.out.println(G1);
-        else if(t==2)
+//        if(t==1)
+//            System.out.println(G1);
+        if(t==2)
             System.out.println(D2);
         else if (t==3 && y!=3) {
             System.out.println(X3);
