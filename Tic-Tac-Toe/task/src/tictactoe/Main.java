@@ -11,23 +11,10 @@ public class Main {
     public static void main(String[] args) {
 
         user=0;
-
-        //Printing the fields
-        Scanner scan = new Scanner(System.in);
-        //System.out.print("Enter cells: ");
-        //String s = scan.nextLine();
         s = "         ";
-//        System.out.println("---------");
-//        for(int i=0;i<3;i++) {
-//            System.out.print("| ");
-//            for(int j=0;j<3;j++) {
-//                System.out.print(s.charAt(c)+" ");
-//                c++;
-//            }
-//            System.out.print("|");
-//            System.out.println();
-//        }
-//        System.out.println("---------");
+
+        Scanner scan = new Scanner(System.in);
+
         printFields(s);
 
 
