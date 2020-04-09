@@ -274,22 +274,24 @@ public class Main {
             }
         }
 
-//        if(t==0 && y==0)
-//        {
-//            for(int i=0;i<s.length();i++) {
-//                if (s.charAt(i) == ' ') {
-//                    t = 1;
-//                    break;
-//                }
-//            }
-//            if(t!=1)
-//                t=2;
-//        }
+        if(t==0 && y==0)
+        {
+            for(int i=0;i<s.length();i++) {
+                if (s.charAt(i) == ' ') {
+                    t = 1;
+                    break;
+                }
+            }
+            if(t!=1)
+                t=2;
+        }
 
 //        if(t==1)
 //            System.out.println(G1);
-        if(t==2)
+        if(t==2) {
             System.out.println(D2);
+            return true;
+        }
         else if (t==3 && y!=3) {
             System.out.println(X3);
             return true;
