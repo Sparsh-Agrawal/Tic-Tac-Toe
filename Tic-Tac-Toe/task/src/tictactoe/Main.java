@@ -245,7 +245,7 @@ public class Main {
                         t = 3;
                        // y = 4;
                         //break;
-                    } else {
+                    } else if(s.charAt(arr[p]) == 'O'){
                        // t = 4;
                         y = 3;
                         //break;
