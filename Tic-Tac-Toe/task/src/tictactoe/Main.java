@@ -187,7 +187,7 @@ public class Main {
 
     static void check(String co) throws NotEmptyException {
         int c=0;
-        if (Integer.parseInt(String.valueOf(co.charAt(0))) > 3 || Integer.parseInt(String.valueOf(co.charAt(0))) < 0 || Integer.parseInt(String.valueOf(co.charAt(2))) > 3 || Integer.parseInt(String.valueOf(co.charAt(2))) < 0) {
+        if (toInt(co.charAt(0)) > 3 || toInt(co.charAt(0)) < 0 || toInt(co.charAt(2)) > 3 || toInt(co.charAt(2)) < 0) {
             //System.out.println("This cell is occupied! Choose another one!");
             throw new InputMismatchException();
         }
@@ -302,5 +302,9 @@ public class Main {
             System.out.println(I5);
 
         return false;
+    }
+
+    static int toInt(char c){
+        return Integer.parseInt(String.valueOf(c));
     }
 }
